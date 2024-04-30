@@ -1,0 +1,47 @@
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    ion-grid {
+      max-width: 300px; 
+      margin: 0 auto;
+      padding-top: 300px;
+  
+      ion-item {
+        --ion-input-padding-start: 10px; 
+        --ion-input-padding-end: 10px;
+        font-size: 26px;
+      }
+
+      ion-button {
+        font-size: 16px;
+        color: white;
+      }
+    }
+  }
+
+#app-logo {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .error-message {
+    padding-top: 5%;
+    animation: bounce 0.5s ease;
+    color: red;
+    font-size: 18px;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }

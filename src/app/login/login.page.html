@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true" style="--background: url('../../assets/icon/background.jpg') 
+no-repeat center center / cover;">
+  <ion-grid class="ion-text-center">
+
+    <ion-row >
+      <ion-col size="12">
+        <img id="app-logo" src="../../assets/icon/AppLogo.jpg" alt="App Logo" />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-item style="--background: transparent">
+          <ion-label position="floating">Username</ion-label>
+          <ion-input type="text" [(ngModel)]="username" size="small"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-item style="--background: transparent">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password" size="small"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="full" shape="round" (click)="login()">Login</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <div [@bounce]="showError" class="error-message" *ngIf="showError">
+      Incorrect username or password. Please enter "Admin" for both entries.
+    </div>
+
+  </ion-grid>
+</ion-content>
