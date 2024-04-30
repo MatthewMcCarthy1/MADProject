@@ -1,0 +1,7 @@
+{
+  "name": "FlashCardApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
