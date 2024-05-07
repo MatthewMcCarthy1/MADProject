@@ -1,5 +1,7 @@
 MADProject - FlashCardApp
+***
 @Matthew McCarthy
+***
 @version Ionic CLI 7.2.0
 
 <h2>Description:</h2>
