@@ -1,8 +1,6 @@
-MADProject - FlashCardApp
-***
-@Matthew McCarthy
-***
-@version Ionic CLI 7.2.0
+MADProject - FlashCardApp <br>
+@Matthew McCarthy <br>
+@version Ionic CLI 7.2.0 <br>
 
 <h2>Description:</h2>
 This is an Ionic framework app that was built using HTML, SCSS, TypeScript.
