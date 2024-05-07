@@ -12,7 +12,7 @@ npm install
 ionic serve
 
 <h1>Features:</h1>
-***
+<br>
 Log in page with user verification. Only Admin access. 
 ***
 Home Page with main features of the application. Each feature is a link to that page. Settings and study tips icons on top right of page for navigating to these pages. Also once the user gets to the home page the app changes to light or dark mode depending on your systems preference. 
