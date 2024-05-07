@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Study Tips!</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="jsonData">
+    <h2>{{ jsonData.School }}</h2>
+    <p><strong>Address:</strong> {{ jsonData.Address }}</p>
+    
+    <h3>Students:</h3>
+    <ul>
+      <li *ngFor="let student of jsonData.students">
+        <p><strong>Name:</strong> {{ student.name }}</p>
+        <p><strong>Age:</strong> {{ student.age }}</p>
+        <p><strong>ID:</strong> {{ student.id }}</p>
+        <p><strong>Address:</strong> {{ student.address }}</p>
+        <p><strong>Course:</strong> {{ student.course }}</p>
+        <hr>
+      </li>
+    </ul>
+  </div>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Create Custom Decks! ✍</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row justify-content-center align-items-center>
+      <ion-col size="12" text-center>
+        <ion-button (click)="toggleFlashcard()" shape="round">Create Flashcard</ion-button>
+        <div *ngIf="flashcardVisible" [@flashcardAnimation]="'visible'" class="flashcard">
+            <ion-textarea class="textarea" [(ngModel)]="flashcardContent" placeholder="Write your notes here"></ion-textarea>
+            <div class="flashcard-footer">
+              <ion-button (click)="saveFlashCard()" color="primary" shape="round">Save</ion-button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+

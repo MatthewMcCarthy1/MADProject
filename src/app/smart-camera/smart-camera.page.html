@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Smart Camera 📷</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding"> 
+  <h2 style="text-align: center; margin-top: 50px;">Use our smart camera to store your physical flash cards on our app!</h2> 
+  <ion-button expand="block" style="margin: 20px;" (click)="openCamera()"> Capture Flash Cards </ion-button> 
+</ion-content>

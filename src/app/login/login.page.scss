@@ -2,20 +2,21 @@ ion-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
   
     ion-grid {
       max-width: 300px; 
       margin: 0 auto;
-      padding-top: 300px;
+      padding-top: 200px;
+      padding-bottom: 100px;
   
       ion-item {
         --ion-input-padding-start: 10px; 
         --ion-input-padding-end: 10px;
-        font-size: 26px;
+        color: black;
       }
 
       ion-button {
-        font-size: 16px;
         color: white;
       }
     }

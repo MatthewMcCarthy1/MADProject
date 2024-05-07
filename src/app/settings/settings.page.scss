@@ -1,0 +1,43 @@
+ion-title {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto; 
+  }
+
+ion-list-header {
+    font-size : 24px;
+    font-weight: bold;
+}
+
+ion-content {
+    position: relative;
+
+    ion-grid {
+      ion-row {
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+  
+        ion-col {
+          text-align: center;
+          max-width: 90%;
+          margin: 0 auto; 
+        }
+
+        ion-col.option {
+            text-align: center;
+            max-width: 90%;
+            margin: 20px auto; 
+          }
+      }
+    }
+  }
+
+  .sign-out-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px; 
+    padding-top: 5%;
+    color: white;
+  }
