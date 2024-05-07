@@ -6,10 +6,10 @@ MADProject - FlashCardApp <br>
 This is an Ionic framework app that was built using HTML, SCSS, TypeScript.
 
 <h2>To Run:</h2>
-git clone https://github.com/MatthewMcCarthy1/MADProject.git
-cd MADProject
-npm install
-ionic serve
+git clone https://github.com/MatthewMcCarthy1/MADProject.git <br>
+cd MADProject <br>
+npm install <br>
+ionic serve <br>
 
 <h2>Features:</h2>
 Log in page with user verification. Only Admin access. <hr>
