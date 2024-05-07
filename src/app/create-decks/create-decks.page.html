@@ -14,18 +14,59 @@
 
 <ion-content class="ion-padding">
   <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <h3>Folders</h3>
+        <div class="folders">
+          <ion-list>
+            <ion-item *ngFor="let folder of folders">
+              <div class="folder-header">
+                <ion-label (click)="toggleFolderNotes(folder)" [class.open]="folder.open" class="folder-name">{{ folder.name }}</ion-label>
+                <ion-buttons slot="end">
+                  <ion-button (click)="editFolder(folder)">
+                    <ion-icon name="create"></ion-icon>
+                  </ion-button>
+                  <ion-button (click)="deleteFolder(folder)">
+                    <ion-icon name="trash"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </div>
+              <ion-list *ngIf="folder.open" class="notes-list">
+                <ion-item>
+                  <ion-label><strong>Flash Cards:</strong></ion-label>
+                </ion-item>
+                <ion-item *ngFor="let note of folder.notes" class="note-item">
+                  <div>
+                    <span>{{ note }}</span>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="editNote(folder, note)">
+                        <ion-icon name="create"></ion-icon>
+                      </ion-button>
+                      <ion-button (click)="deleteNote(folder, note)">
+                        <ion-icon name="trash"></ion-icon>
+                      </ion-button>
+                    </ion-buttons>
+                  </div>
+                </ion-item>
+              </ion-list>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
     <ion-row justify-content-center align-items-center>
       <ion-col size="12" text-center>
         <ion-button (click)="toggleFlashcard()" shape="round">Create Flashcard</ion-button>
         <div *ngIf="flashcardVisible" [@flashcardAnimation]="'visible'" class="flashcard">
-            <ion-textarea class="textarea" [(ngModel)]="flashcardContent" placeholder="Write your notes here"></ion-textarea>
-            <div class="flashcard-footer">
-              <ion-button (click)="saveFlashCard()" color="primary" shape="round">Save</ion-button>
+          <ion-textarea class="textarea" [(ngModel)]="flashcardContent" placeholder="Write your notes here"></ion-textarea>
+          <div class="flashcard-footer">
+            <ion-button (click)="saveFlashCard()" color="primary" shape="round">Save</ion-button>
           </div>
         </div>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
-
-

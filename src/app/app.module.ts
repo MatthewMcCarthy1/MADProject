@@ -16,10 +16,12 @@ import { HttpClientModule } from '@angular/common/http'; //http client
 import { Plugins } from '@capacitor/core'; // pluginss
 const { Camera } = Plugins; 
 
+import { IonicStorageModule } from '@ionic/storage-angular';
+
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot()],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     DarkPaletteService,

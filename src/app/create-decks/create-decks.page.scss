@@ -43,3 +43,26 @@ ion-title {
     height: 100%;
   }
 
+  .folders {
+    .folder-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .folder-name {
+      flex: 1;
+    }
+  
+    .notes-list {
+      margin-top: 10px;
+    }
+  
+    .note-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+  }
