@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 
 export class LoginPage {
-  username: string = 'Admin'; // Default username and password
-  password: string = 'Admin';
+  username: string = 'Admin'; // Default username and password set to admin for now
+  password: string = 'Admin'; //Will hopefully allow users to sign up and have their own account in future
   showError = false;
 
   constructor(private router: Router) {}
@@ -22,7 +22,7 @@ export class LoginPage {
     } else {
       // Show error message
       this.showError = true;
-
+      //display error message animation long enough for user to read
       setTimeout(() => {
         this.showError = false;
       }, 3000);

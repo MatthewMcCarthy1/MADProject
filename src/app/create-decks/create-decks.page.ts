@@ -58,7 +58,7 @@ export class CreateDecksPage implements OnInit {
   toggleFolderNotes(folder: Folder) {
     folder.open = !folder.open;
 
-    // this saves the state of the folders
+    // this saves the state of the folders(open or closed)
     this.storage.set('folders', JSON.stringify(this.folders)).then(() => {
       console.log('Folders state updated in Ionic Storage');
     }).catch((error) => {
@@ -90,7 +90,7 @@ export class CreateDecksPage implements OnInit {
 
   //edit the note
   editNote(folder: Folder, note: string) {
-    const editedNote = prompt('Edit note', note);
+    const editedNote = prompt('Edit flash card', note);
     if (editedNote) {
       const index = folder.notes.indexOf(note);
       folder.notes[index] = editedNote;
